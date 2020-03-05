@@ -1,5 +1,5 @@
 import svelte from 'rollup-plugin-svelte'
-import replace from '@rollup/plugin-replace';
+import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
@@ -28,7 +28,7 @@ export default {
     replace({
       // you're right, you shouldn't be injecting this
       // into a client script :)
-      API_KEY: JSON.stringify(process.env.API_KEY),
+      WEATHER_API_KEY: JSON.stringify(process.env.WEATHER_API_KEY),
     }),
 
     // If you have external dependencies installed from

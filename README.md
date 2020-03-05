@@ -13,10 +13,12 @@ cd weather
 npm i
 ```
 
-`made with svelte`
+### API Keys
 
-To start go to [OpenWeather](https://openweathermap.org) and create an account.
-Create an api key and copy into the `example.env` [file](./example.env)
+#### OpenWeather
+
+Go to [OpenWeather](https://openweathermap.org) and create an account.
+Create an api key and copy into the example.env [file](./example.env) as `WEATHER_API_KEY`
 
 Then you can start the application
 

@@ -22,11 +22,14 @@
     padding: 1rem;
     border: 1px solid black;
     border-radius: 5px;
-    box-shadow: #333 10px 10px 10px 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
 </style>
 
-<div class="card-wrapper" id="{id}}">
+<div class="card-wrapper" {id}>
   <div class="card">
     <h2>{weatherInfo.name}</h2>
     <div class="weather-info">
