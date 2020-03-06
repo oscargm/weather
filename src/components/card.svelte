@@ -4,16 +4,12 @@
   import Temp from './temp.svelte'
   import Weather from './weather.svelte'
   import ColorSwitcher from './color-switcher.svelte'
+  import Pollution from './pollution.svelte'
   export let id
   export let weatherInfo
   let background = [255, 255, 255]
   let textColor = 'black'
-  onMount(() => {
-    console.log('weatherInfo', weatherInfo)
-    console.log('keys', Object.keys(weatherInfo.main))
-  })
   const changeBackground = () => {
-    console.log('changeBackground', background)
     background = background[0] === 0 ? [255, 255, 255, 0.8] : [0, 0, 0, 0.8]
     textColor = background[0] === 0 ? 'white' : 'black'
   }
@@ -32,7 +28,7 @@
     flex-direction: column;
     padding: 1rem;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     color: var(--text-color);
     background-color: rgba(var(--background-color));
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -58,7 +54,9 @@
     <div class="card-header">
       <h2>{weatherInfo.name}</h2>
       <div class="color-switcher">
-        <ColorSwitcher checked={true} onChange={changeBackground} />
+        <ColorSwitcher
+          checked={textColor === 'white'}
+          onChange={changeBackground} />
       </div>
     </div>
     <div class="weather-info">
@@ -81,6 +79,7 @@
       <Weather
         icon={weatherInfo.weather[0].iconUrl}
         description={weatherInfo.weather[0].description} />
+      <Pollution />
     </div>
   </div>
 </div>
