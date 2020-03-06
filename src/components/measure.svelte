@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.05rem 0;
+    padding: 0.1rem 0;
   }
 </style>
 
