@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0.5rem 0;
   }
   h4,
   h5 {
