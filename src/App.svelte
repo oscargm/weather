@@ -14,7 +14,7 @@
     // citiesGet()
     console.log('inner height', window.innerHeight)
     console.log('inner width', window.innerWidth)
-    imagesGet()
+    // imagesGet()
     weatherGet()
   })
 
@@ -66,7 +66,8 @@
     width: var(--container-width);
     height: var(--container-height);
     background-position: center center;
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    background: transparent;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -90,15 +91,15 @@
   <div
     class="container"
     style="--container-width: {window.innerWidth}px;--container-height: {window.innerHeight}px">
-    <div class="title">
+    <!-- <div class="title">
       <h1>Weather App</h1>
-    </div>
+    </div> -->
     <div class="content">
-      <select id="citySelector" on:change={onCitySelectionChange}>
+      <!-- <select id="citySelector" on:change={onCitySelectionChange}>
         {#each cities as { id, name }}
           <option value={id}>{name}</option>
         {/each}
-      </select>
+      </select> -->
       {#if weather}
         <div class="weather-card">
           <Card weatherInfo={weather} id={'weather'} />

@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "build": "env-cmd -f ./development.env rollup -c",
     "dev": "env-cmd -f ./development.env rollup -c -w",
     "mock-server": "json-server --watch ./data/mock/barcelona-weather.json",
     "start": "sirv public",

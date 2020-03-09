@@ -13,8 +13,8 @@ export async function getImage(cityName, size) {
 
 export async function getWeatherData(cityId) {
   const weatherRes = await fetch(
-    // `http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${WEATHER_API_KEY}&units=metric`
-    `http://localhost:3000/weather`
+    `http://api.openweathermap.org/data/2.5/weather?id=${cityId}&APPID=${WEATHER_API_KEY}&units=metric`
+    // `http://localhost:3000/weather`
   )
   return await weatherRes.json().then(weatherInfo => {
     return getWeatherIcon(weatherInfo.weather[0].icon).then(iconUrl => {
