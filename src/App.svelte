@@ -35,16 +35,20 @@
     console.log('event', event.target.value)
     selectedCity = cities.find(city => city.id === parseInt(event.target.value))
     weatherGet()
-    imagesGet()
+    // imagesGet()
   }
 </script>
 
 <style>
+  /* html,
+  body {
+    background: transparent;
+  } */
   .main {
     margin: 0;
     padding: 0;
   }
-  .title {
+  /* .title {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,27 +62,27 @@
       rgba(255, 255, 255, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     );
-  }
+  } */
   .container {
     position: relative;
     box-sizing: border-box;
     margin: 0 auto;
-    width: var(--container-width);
-    height: var(--container-height);
-    background-position: center center;
+    /* width: var(--container-width); */
+    /* height: var(--container-height); */
+    /* background-position: center center; */
     /* background-color: #ccc; */
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
+    /* background: transparent; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
   }
   .content {
     padding: 1rem;
   }
-  #citySelector {
+  /* #citySelector {
     position: absolute;
     left: 50px;
     top: 50px;
-  }
+  } */
   .weather-card {
     position: absolute;
     top: 150px;
